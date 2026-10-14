@@ -1,3 +1,6 @@
+<?php 
+$page_active = "index" ;
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,29 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaBooks — Votre librairie en ligne</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="part/header.css">
     <script src="panier.js" defer></script>
     <script src="cart.js" defer></script>
 </head>
 
 <body>
 
-<header class="partie1">
-    <div class="brand">
-        <h2><a href="index.html">NovaBooks</a></h2>
-        <h5>Des histoires qui restent</h5>
-    </div>
+<?php require 'part/header.php'?>
 
-    <nav>
-        <ul>
-            <li><a href="products.html">Produits</a></li>
-            <li><a href="contact.html">Connexion</a></li>
-            <li class="panier">
-                <a href="cart.html">🛒<span id="icon-panier"></span></a>
-            </li>
-            <li><a href="about.html">À propos</a></li>
-        </ul>
-    </nav>
-</header>
 
 <main>
 
@@ -38,7 +27,7 @@
         <p>Romance, Dark Romance, Fantasy, Thriller...</p>
         <p>Trouvez le livre qui fera battre votre cœur</p>
 
-        <a href="products.html"><h5>Découvrir la boutique</h5></a>
+        <a href="products.php"><h5>Découvrir la boutique</h5></a>
     </section>
 
     <!-- ===== COUPS DE CŒUR ===== -->
@@ -53,63 +42,63 @@
             <img src="image/téléchargement (10).jpeg" alt="Captive — Sarah Rivens">
             <p><strong>Shattered vows</strong><br>de Shain Rose</p>
             <span>11 500 FCFA</span>
-            <h3><a href="product.html#captive" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#captive" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/Home - Ali Hazelwood.jpeg" alt="Leonid Petrov — Nanou AD">
             <p><strong>The loove hypothesis</strong><br> Ali Hazelwood</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#leonid" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#leonid" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/Uncovering Rose_ Special Edition Cover - A Curvy Girl Mafia Second Chance Romance (The Sinful Secrets Series).jpeg" alt="Uncovering Rose — Sinful Secrets">
             <p><strong>Uncovering Rose</strong><br>Annie charm</p>
             <span>12 000 FCFA</span>
-            <h3><a href="product.html#uncovering" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#uncovering" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/birth.jpeg" alt="Birthday Girl — Penelope Douglas">
             <p><strong>Birthday Girl</strong><br>de Penelope Douglas</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#birthday" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#birthday" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/Mad Majesty.jpeg" alt="Mad Majesty — Sarah Rivens">
             <p><strong>Mad Majesty</strong><br>Delinda  Dane</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#madmajesty" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#madmajesty" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/Wild Love NA.jpeg" alt="Wild Love — Elsie Silver">
             <p><strong>Wild Love</strong><br>d'Elsie Silver</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#wildlove" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#wildlove" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/The Wrong Bride _ Maura, Catharina, Jaubert, Agnès_ Amazon_fr_ Livres.jpeg" alt="The Wrong Bride — Catharina Maura">
             <p><strong>The Wrong Bride</strong><br>de Catharina Maura</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#wrongbride" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#wrongbride" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/THR4" alt="Throttled — Lauren Asher">
             <p><strong>Throttled</strong><br>de Lauren Asher</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#throttled" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#throttled" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">
             <img src="image/FANTA2.jpeg" alt="Hexed — Emily McIntire">
             <p><strong>Hexed</strong><br>d'Emily McIntire</p>
             <span>13 500 FCFA</span>
-            <h3><a href="product.html#hexed" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#hexed" class="plus">Voir plus</a></h3>
         </div>
 
     </section>

@@ -1,0 +1,76 @@
+<?php
+
+echo "🔄 Script lancé à " . date('H:i:s') . "<br>";
+
+header('Content-Type: text/html; charset=utf-8');
+require 'config.php';
+
+// Activer l'affichage des erreurs
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Lire les 2 fichiers HTML
+$html_products = file_get_contents('source-products.html');
+$html_product = file_get_contents('source-product.html');
+
+// Vérifier que les fichiers sont bien lus
+echo "Fichier products.html : " . strlen($html_products) . " caractères<br>";
+echo "Fichier product.html : " . strlen($html_product) . " caractères<br>";
+
+// Découper le HTML en morceaux (un par livre)
+$morceaux = explode('<section class="product-page"', $html_product);
+array_shift($morceaux);
+
+// Compter les livres
+$nb_livres = count($morceaux);
+echo "Nombre de livres : " . $nb_livres . "<br>";
+
+echo "<hr>";
+echo "<h3>Import des livres</h3>";
+
+$nb_importes = 0;
+
+foreach ($morceaux as $morceau) {
+
+    // --- Titre ---
+    preg_match('/<h1>(.+?)<\/h1>/s', $morceau, $match_titre);
+    if (!isset($match_titre[1])) {
+        echo "⚠️ Morceau sans titre, sauté<br>";
+        continue;
+    }
+    $titre = trim($match_titre[1]);
+
+    // --- Auteur ---
+    preg_match('/<p class="author">(.+?)<\/p>/s', $morceau, $match_auteur);
+    $auteur = isset($match_auteur[1]) ? trim(str_replace('Par : ', '', $match_auteur[1])) : 'Inconnu';
+
+    // --- Prix ---
+    preg_match('/<p class="price">(.+?)<\/p>/s', $morceau, $match_prix);
+    $prix_brut = isset($match_prix[1]) ? trim($match_prix[1]) : '0';
+    $prix_propre = str_replace([' ', 'FCFA', 'fcfa'], '', $prix_brut);
+    $prix = (int)$prix_propre;
+
+    // --- Image ---
+    preg_match('/<img src="(.+?)"/s', $morceau, $match_image);
+    $image = isset($match_image[1]) ? trim($match_image[1]) : '';
+
+    // --- Description ---
+    preg_match('/<p class="description">(.+?)<\/p>/s', $morceau, $match_desc);
+    $description = isset($match_desc[1]) ? trim($match_desc[1]) : '';
+
+    // --- Insertion MySQL ---
+    $sql = "INSERT INTO articles (titre, auteur, prix, categorie, image, description, stock) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([$titre, $auteur, $prix, 'Non classé', $image, $description, 10]);
+        $nb_importes++;
+    } catch (Exception $e) {
+        echo "❌ Erreur sur '" . $titre . "' : " . $e->getMessage() . "<br>";
+    }
+}
+
+echo "<hr>";
+echo "<strong>Total importé : " . $nb_importes . " livres !</strong>";
+?>

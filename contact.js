@@ -220,3 +220,21 @@ window.addEventListener('load', function() {
     
     console.log('✅ succes.js chargé avec succès');
 });
+
+
+
+
+function login(email, password, remember) {
+    // ... vérification ...
+
+    saveCurrentUser(email);
+    alert('✅ Connexion réussie !');
+
+    // Récupérer la page demandée avant la connexion
+    const redirect = localStorage.getItem('redirectAfterLogin') || 'index.html';
+    localStorage.removeItem('redirectAfterLogin');
+
+    setTimeout(() => {
+        window.location.href = redirect;
+    }, 500);
+}

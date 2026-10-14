@@ -8,10 +8,7 @@
     <script src="succes.js"></script>
 </head>
 
-
 <body>
-
-
 
 <form action="">
     
@@ -20,9 +17,6 @@
     <hr>
     <h3>Mode de paiement</h3>
 </div>
-
-
-
 
 
     <label>

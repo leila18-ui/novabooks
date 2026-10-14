@@ -70,6 +70,7 @@ if (monPanier.length === 0) {
         });
     });
 
+    //ajout au panier
     document.querySelectorAll(".btn-sup").forEach(function(bouton) {
         bouton.addEventListener("click", function() {
             const nom = bouton.getAttribute("data-nom");

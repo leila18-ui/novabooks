@@ -1,3 +1,6 @@
+<?php 
+$page_active = "cart"
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -10,21 +13,7 @@
 </head>
 <body>
 
-<!-- ===== BARRE DE NAV ===== -->
-<section class="partie1">
-    <h2>NovaBooks</h2>
-    <h5>Des histoires qui restent</h5>
-    <nav>
-        <ul>
-            <li><a href="about.html">À propos</a></li>
-            <li><a href="products.html">Produits</a></li>
-            <li class="panier">
-                <a href="cart.html">🛒<span id="icon-panier"></span></a>
-            </li>
-            <li><a href="checkout.html">Checkout</a></li>
-        </ul>
-    </nav>
-</section>
+<?php require 'part/header.php'?>
 
 <!-- ===== PANIER ===== -->
 <section class="mon-panier">
@@ -33,7 +22,7 @@
     <!-- Les articles (remplis par cart.js) -->
     <div id="liste-panier"></div>
 
-    <!-- ✅ AJOUT 1 : RÉCAP + BOUTON -->
+    <!--  AJOUT 1 : RÉCAP + BOUTON -->
     <div id="recapitulatif" class="recapitulatif" style="display: none;">
         <h2>Récapitulatif</h2>
 

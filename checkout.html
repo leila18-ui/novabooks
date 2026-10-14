@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout — NovaBooks</title>
     <script src="panier.js" defer></script>
+    <link rel="stylesheet" href="part/header.css">
     <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
@@ -22,13 +23,13 @@
                 <li class="panier">
                     <a href="cart.html">🛒<span id="icon-panier"></span></a>
                 </li>
-                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="checkout.html" class="active">Checkout</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="form">
-        <form id="checkout-form">
+        <form id="checkout-form" action="traitement.php" method="post">
 
             <fieldset class="info">
                 <legend>Informations personnelles</legend>
@@ -62,5 +63,24 @@
         </form>
     </section>
 
+
+
+
+
+
+
+
+
+    <script>
+(function() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+    if (!currentUser) {
+        localStorage.setItem('redirectAfterLogin', 'checkout.html');
+        alert('⚠️ Connectez-vous pour accéder au checkout');
+        window.location.href = 'contact.html';
+    }
+})();
+</script>
 </body>
 </html>

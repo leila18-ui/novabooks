@@ -1,3 +1,6 @@
+<?php 
+$page_active = "about";
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,25 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À Propos - NovaBooks</title>
     <script src="panier.js" defer></script>
+    <link rel="stylesheet" href="part/header.css">
     <link rel="stylesheet" href="about.css">
 </head>
 <body>
 
-    <section class="partie1">
-
-        <h2><a href="index.html">NovaBooks</a></h2>
-        <h5>Des histoires qui restent</h5>
-
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="products.html">Produits</a></li>
-                <li><a href="about.html">À propos</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="panier"><a href="cart.html">🛒<span  id="icon-panier"></span> </a></li>
-            </ul>
-        </nav>
-    </section>
+      <?php require 'part/header.php';?>
 
     <main>
 
@@ -46,7 +36,7 @@
                 <p>Basée en Côte d'Ivoire, nous servons des lecteurs passionnés partout dans le pays, avec livraison rapide et sécurisée.</p>
             </div>
         </section>
-    
+
         <!-- NOTRE MISSION -->
         <section class="mission">
             <div class="mission-texte">
@@ -154,7 +144,7 @@
         <section class="cta-section">
             <h2>Prêt à découvrir votre prochain coup de cœur ?</h2>
             <p>Explorez notre sélection exclusive de livres captivants</p>
-            <a href="products.html" class="cta-button">Découvrir la boutique</a>
+            <a href="products.php" class="cta-button">Découvrir la boutique</a>
         </section>
 
     </main>
