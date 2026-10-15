@@ -19,11 +19,6 @@ function saveCurrentUser(email) {
 // ===== RÉCUPÉRATION DES ÉLÉMENTS HTML =====
 
 const form = document.querySelector('form');
-const inputEmail = form ? form.querySelector('input[name="nom"]') : null;
-const inputPassword = form ? form.querySelector('input[name="Adresse"]') : null;
-const checkboxRemember = form ? form.querySelector('input[name="souvenir"]') : null;
-const linkCreateAccount = document.querySelector('a.comp');
-const linkForgotPassword = document.querySelector('a.mdp');
 
 // ===== FONCTIONS D'AUTHENTIFICATION =====
 
@@ -32,34 +27,33 @@ function register(email, password, passwordConfirm) {
         alert('❌ Tous les champs sont obligatoires');
         return false;
     }
-    
+
     if (password !== passwordConfirm) {
         alert('❌ Les mots de passe ne correspondent pas');
         return false;
     }
-    
+
     if (password.length < 4) {
         alert('❌ Le mot de passe doit faire au moins 4 caractères');
         return false;
     }
-    
+
     const users = getUsers();
     if (users.find(u => u.email === email)) {
         alert('❌ Cet email est déjà utilisé');
         return false;
     }
-    
+
     users.push({ email, password });
     saveUsers(users);
-    
+
     alert('✅ Inscription réussie ! Connectez-vous maintenant.');
-    
-    // Vider les champs et revenir au login
+
     if (form) {
         form.reset();
     }
     switchToLogin();
-    
+
     return true;
 }
 
@@ -68,82 +62,103 @@ function login(email, password, remember) {
         alert('❌ Veuillez remplir tous les champs');
         return false;
     }
-    
+
     const users = getUsers();
     const user = users.find(u => u.email === email && u.password === password);
-    
+
     if (!user) {
         alert('❌ Email ou mot de passe incorrect');
         return false;
     }
-    
+
     saveCurrentUser(email);
-    
+
     if (remember) {
         localStorage.setItem('rememberMe', 'true');
     }
-    
+
     alert('✅ Connexion réussie !');
-    
+
+    // Récupérer la page demandée avant la connexion
+    const redirect = localStorage.getItem('redirectAfterLogin') || 'index.php';
+    localStorage.removeItem('redirectAfterLogin');
+
     setTimeout(function() {
-        window.location.href = 'index.html';
+        window.location.href = redirect;
     }, 500);
-    
+
     return true;
 }
 
 // ===== BASCULER ENTRE LOGIN ET REGISTER =====
 
 function switchToLogin() {
-    if (form) {
-        form.innerHTML = `
-            <h2>Connexion</h2>
-            <h2>mail</h2>
-            <input type="text" name="nom" placeholder=" ----  "> <br>
-            <h2>mot de passe</h2>
-            <input type="password" name="Adresse" placeholder=" ---- "> <br>
-            
-            <div class="souvenir">
+    if (!form) return;
+
+    form.innerHTML = `
+        <h2 class="login-title">Connexion</h2>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="exemple@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="souvenir">
             <label>
                 <input type="checkbox" name="souvenir">
-                Se souvenir de moi
+                <span>Se souvenir de moi</span>
             </label>
-            </div>
-            
-            <div class="connexion">
+        </div>
+
+        <div class="connexion">
             <button type="submit">Se connecter</button>
-            </div>
-            
-            <a href="" class="mdp"> Mot de passe oublié?</a> <br>
-            <a href="" class="comp">Créer un compte</a>
-        `;
-        
-        // Réattacher les événements
-        attachLoginEvents();
-    }
+        </div>
+
+        <div class="liens">
+            <a href="#" class="mdp">Mot de passe oublié ?</a>
+            <a href="#" class="comp">Créer un compte</a>
+        </div>
+    `;
+
+    attachLoginEvents();
 }
 
 function switchToRegister() {
-    if (form) {
-        form.innerHTML = `
-            <h2>Créer un compte</h2>
-            <h2>Email</h2>
-            <input type="email" id="reg-email" placeholder="Votre email" required> <br>
-            <h2>Mot de passe</h2>
-            <input type="password" id="reg-password" placeholder="Minimum 4 caractères" required> <br>
-            <h2>Confirmer le mot de passe</h2>
-            <input type="password" id="reg-password-confirm" placeholder="Confirmez votre mot de passe" required> <br>
-            
-            <div class="connexion">
+    if (!form) return;
+
+    form.innerHTML = `
+        <h2 class="login-title">Créer un compte</h2>
+
+        <div class="form-group">
+            <label for="reg-email">Email</label>
+            <input type="email" id="reg-email" placeholder="Votre email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="reg-password">Mot de passe</label>
+            <input type="password" id="reg-password" placeholder="Minimum 4 caractères" required>
+        </div>
+
+        <div class="form-group">
+            <label for="reg-password-confirm">Confirmer le mot de passe</label>
+            <input type="password" id="reg-password-confirm" placeholder="Confirmez votre mot de passe" required>
+        </div>
+
+        <div class="connexion">
             <button type="submit">S'inscrire</button>
-            </div>
-            
-            <a href="" class="comp">Retour à la connexion</a>
-        `;
-        
-        // Réattacher les événements
-        attachRegisterEvents();
-    }
+        </div>
+
+        <div class="liens">
+            <a href="#" class="comp">Retour à la connexion</a>
+        </div>
+    `;
+
+    attachRegisterEvents();
 }
 
 // ===== ÉVÉNEMENTS LOGIN =====
@@ -152,31 +167,32 @@ function attachLoginEvents() {
     const form = document.querySelector('form');
     const linkCreateAccount = document.querySelector('a.comp');
     const linkForgotPassword = document.querySelector('a.mdp');
-    
+
     if (form) {
-        form.addEventListener('submit', function(e) {
+        // ✅ onsubmit (au lieu de addEventListener) → pas de doublon
+        form.onsubmit = function(e) {
             e.preventDefault();
-            
-            const email = form.querySelector('input[name="nom"]').value.trim();
-            const password = form.querySelector('input[name="Adresse"]').value.trim();
+
+            const email = form.querySelector('input[name="email"]').value.trim();
+            const password = form.querySelector('input[name="password"]').value.trim();
             const remember = form.querySelector('input[name="souvenir"]').checked;
-            
+
             login(email, password, remember);
-        });
+        };
     }
-    
+
     if (linkCreateAccount) {
-        linkCreateAccount.addEventListener('click', function(e) {
+        linkCreateAccount.onclick = function(e) {
             e.preventDefault();
             switchToRegister();
-        });
+        };
     }
-    
+
     if (linkForgotPassword) {
-        linkForgotPassword.addEventListener('click', function(e) {
+        linkForgotPassword.onclick = function(e) {
             e.preventDefault();
             alert('⚠️ Fonctionnalité en construction.');
-        });
+        };
     }
 }
 
@@ -185,56 +201,32 @@ function attachLoginEvents() {
 function attachRegisterEvents() {
     const form = document.querySelector('form');
     const linkBackToLogin = document.querySelector('a.comp');
-    
+
     if (form) {
-        form.addEventListener('submit', function(e) {
+        form.onsubmit = function(e) {
             e.preventDefault();
-            
+
             const email = document.getElementById('reg-email').value.trim();
             const password = document.getElementById('reg-password').value.trim();
             const passwordConfirm = document.getElementById('reg-password-confirm').value.trim();
-            
+
             register(email, password, passwordConfirm);
-        });
+        };
     }
-    
+
     if (linkBackToLogin) {
-        linkBackToLogin.addEventListener('click', function(e) {
+        linkBackToLogin.onclick = function(e) {
             e.preventDefault();
             switchToLogin();
-        });
+        };
     }
 }
 
 // ===== INITIALISATION =====
 
 window.addEventListener('load', function() {
-    // Si déjà connecté, rediriger vers index.html
-    const currentUser = getCurrentUser();
-    if (currentUser) {
-        window.location.href = 'index.html';
-    }
-    
     // Attacher les événements au formulaire de login
     attachLoginEvents();
-    
-    console.log('✅ succes.js chargé avec succès');
+
+    console.log('✅ contact.js chargé avec succès');
 });
-
-
-
-
-function login(email, password, remember) {
-    // ... vérification ...
-
-    saveCurrentUser(email);
-    alert('✅ Connexion réussie !');
-
-    // Récupérer la page demandée avant la connexion
-    const redirect = localStorage.getItem('redirectAfterLogin') || 'index.html';
-    localStorage.removeItem('redirectAfterLogin');
-
-    setTimeout(() => {
-        window.location.href = redirect;
-    }, 500);
-}

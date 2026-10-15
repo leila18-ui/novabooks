@@ -17,5 +17,3 @@ try {
 } catch (Exception $e){
     echo "Leila, Erreur !" .$e->getMessage(); 
 }
-
-?>

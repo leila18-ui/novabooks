@@ -34,61 +34,61 @@ $page_active = "products";
         <div class="livre">
             <h3>SHATTERED VOWS</h3>
             <img src="image/téléchargement (10).jpeg" alt="Shattered Vows">
-            <a href="product.html#shatvow" class="plus">En savoir plus</a>
+            <a href="product.php#shatvow" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>GOD OF FURY</h3>
             <img src="image/téléchargement (11).jpeg" alt="God of Fury">
-            <a href="product.html#godoffury" class="plus">En savoir plus</a>
+            <a href="product.php#godoffury" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>CORRUPT</h3>
             <img src="image/téléchargement (12).jpeg" alt="Corrupt">
-            <a href="product.html#corrupt" class="plus">En savoir plus</a>
+            <a href="product.php#corrupt" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>KISS THE VILLAIN</h3>
             <img src="image/Kiss The Villain_ A Dark MM Enemies to Lovers Romance.jpeg" alt="Kiss The Villain">
-            <a href="product.html#kiss" class="plus">En savoir plus</a>
+            <a href="product.php#kiss" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>PUNK 57</h3>
             <img src="image/Punk 57.jpeg" alt="Punk 57">
-            <a href="product.html#punk" class="plus">En savoir plus</a>
+            <a href="product.php#punk" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>PHANTOM</h3>
             <img src="image/Phantom.jpeg" alt="Phantom">
-            <a href="product.html#phantom" class="plus">En savoir plus</a>
+            <a href="product.php#phantom" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>UNCOVERING ROSE</h3>
             <img src="image/Uncovering Rose_ Special Edition Cover - A Curvy Girl Mafia Second Chance Romance (The Sinful Secrets Series).jpeg" alt="Uncovering Rose">
-            <a href="product.html#UNCOVE" class="plus">En savoir plus</a>
+            <a href="product.php#UNCOVE" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE DEVIL'S SONS</h3>
             <img src="image/The devil's sons DR.jpeg" alt="The Devil's Sons">
-            <a href="product.html#dark" class="plus">En savoir plus</a>
+            <a href="product.php#dark" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>VENDETTA</h3>
             <img src="image/Vendetta DR.jpeg" alt="Vendetta">
-            <a href="product.html#vendetta" class="plus">En savoir plus</a>
+            <a href="product.php#vendetta" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>TWISTED</h3>
             <img src="image/Twisted.jpeg" alt="Twisted">
-            <a href="product.html#twist" class="plus">En savoir plus</a>
+            <a href="product.php#twist" class="plus">En savoir plus</a>
         </div>
     </div>
 </section>
@@ -103,61 +103,61 @@ $page_active = "products";
         <div class="livre">
             <h3>COLLIDE</h3>
             <img src="image/tel na 3.jpeg" alt="Collide">
-            <a href="product.html#collide" class="plus">En savoir plus</a>
+            <a href="product.php#collide" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE LEGACY</h3>
             <img src="image/télécharger (9).jpeg" alt="The Legacy">
-            <a href="product.html#collid" class="plus">En savoir plus</a>
+            <a href="product.php#collid" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>SPIRAL</h3>
             <img src="image/télécharger (10).jpeg" alt="Spiral">
-            <a href="product.html#colli" class="plus">En savoir plus</a>
+            <a href="product.php#colli" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE LOVE HYPOTHESIS</h3>
             <img src="image/Home - Ali Hazelwood.jpeg" alt="The Love Hypothesis">
-            <a href="product.html#love" class="plus">En savoir plus</a>
+            <a href="product.php#love" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>AIME-MOI JE TE FUIS</h3>
             <img src="image/Aime-moi je te fuis.jpeg" alt="Aime-moi je te fuis">
-            <a href="product.html#fuis" class="plus">En savoir plus</a>
+            <a href="product.php#fuis" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>PLAY ALONG</h3>
             <img src="image/NA (2).jpeg" alt="Play Along">
-            <a href="product.html#play" class="plus">En savoir plus</a>
+            <a href="product.php#play" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>BIRTHDAY GIRL</h3>
             <img src="image/birth.jpeg" alt="Birthday Girl">
-            <a href="product.html#birth" class="plus">En savoir plus</a>
+            <a href="product.php#birth" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>WILD LOVE</h3>
             <img src="image/Wild Love NA.jpeg" alt="Wild Love">
-            <a href="product.html#wild" class="plus">En savoir plus</a>
+            <a href="product.php#wild" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>STAY WITH ME</h3>
             <img src="image/NA 3.jpeg" alt="Stay With Me">
-            <a href="product.html#stay" class="plus">En savoir plus</a>
+            <a href="product.php#stay" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>MIDNIGHT KISS</h3>
             <img src="image/NA.jpeg" alt="Midnight Kiss">
-            <a href="product.html#Midnight" class="plus">En savoir plus</a>
+            <a href="product.php#Midnight" class="plus">En savoir plus</a>
         </div>
     </div>
 </section>
@@ -172,61 +172,61 @@ $page_active = "products";
         <div class="livre">
             <h3>LA VENGEANCE DE LA VEUVE NOIRE</h3>
             <img src="image/la vengeance de la veuve noire.jpeg" alt="La vengeance de la veuve noire">
-            <a href="product.html#veuve" class="plus">En savoir plus</a>
+            <a href="product.php#veuve" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>MAD MAJESTY</h3>
             <img src="image/Mad Majesty.jpeg" alt="Mad Majesty">
-            <a href="product.html#mad" class="plus">En savoir plus</a>
+            <a href="product.php#mad" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>UN AUTOMNE</h3>
             <img src="image/Dans quel ordre lire les livres de Morgane Moncomble _.jpeg" alt="Un automne">
-            <a href="product.html#order" class="plus">En savoir plus</a>
+            <a href="product.php#order" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE WRONG BRIDE</h3>
             <img src="image/The Wrong Bride _ Maura, Catharina, Jaubert, Agnès_ Amazon_fr_ Livres.jpeg" alt="The Wrong Bride">
-            <a href="product.html#wrong" class="plus">En savoir plus</a>
+            <a href="product.php#wrong" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>ICE BREAKER</h3>
             <img src="image/ROM1.jpeg" alt="Ice Breaker">
-            <a href="product.html#ice" class="plus">En savoir plus</a>
+            <a href="product.php#ice" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE MISTAKE</h3>
             <img src="image/erreur.jpeg" alt="The Mistake">
-            <a href="product.html#Mistake" class="plus">En savoir plus</a>
+            <a href="product.php#Mistake" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>TWISTED VOWS</h3>
             <img src="image/ROM2.jpeg" alt="Twisted Vows">
-            <a href="product.html#vows" class="plus">En savoir plus</a>
+            <a href="product.php#vows" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>TWIST HATE</h3>
             <img src="image/ROM3.jpeg" alt="Twist Hate">
-            <a href="product.html#hate" class="plus">En savoir plus</a>
+            <a href="product.php#hate" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>STAY WITH ME</h3>
             <img src="image/ROM4.jpeg" alt="Stay With Me">
-            <a href="product.html#games" class="plus">En savoir plus</a>
+            <a href="product.php#games" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>MIDNIGHT KISS</h3>
             <img src="image/birth.jpeg" alt="Midnight Kiss">
-            <a href="product.html#birth1" class="plus">En savoir plus</a>
+            <a href="product.php#birth1" class="plus">En savoir plus</a>
         </div>
     </div>
 </section>
@@ -241,61 +241,61 @@ $page_active = "products";
         <div class="livre">
             <h3>THE CASE FILE</h3>
             <img src="image/The Case File (The Bellhaven Series).jpeg" alt="The Case File">
-            <a href="product.html#thr1" class="plus">En savoir plus</a>
+            <a href="product.php#thr1" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE GHOST STATION</h3>
             <img src="image/The Ghost Station – New Sci-Fi Cyber Thriller Out Now!.jpeg" alt="The Ghost Station">
-            <a href="product.html#thr2" class="plus">En savoir plus</a>
+            <a href="product.php#thr2" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE SHADOW </h3>
             <img src="image/THR1.jpeg" alt="Thriller 1">
-            <a href="product.html#thr3" class="plus">En savoir plus</a>
+            <a href="product.php#thr3" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>KILL JOY</h3>
             <img src="image/17_100.jpeg" alt="Thriller 4">
-            <a href="product.html#thr4" class="plus">En savoir plus</a>
+            <a href="product.php#thr4" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>GOOD GIRL BAD BLOOD </h3>
             <img src="image/18 New Page-Turners Our Editors Couldn't Put Down This Year, From Thrillers to Romance Novels.jpeg" alt="Page-Turner">
-            <a href="product.html#thr5" class="plus">En savoir plus</a>
+            <a href="product.php#thr5" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>CARAVAL</h3>
             <img src="image/télécharger thriller.jpeg" alt="Thriller 6">
-            <a href="product.html#thr6" class="plus">En savoir plus</a>
+            <a href="product.php#thr6" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>AFTER THE LIGHT </h3>
             <img src="image/THR2.jpeg" alt="High School Romance">
-            <a href="product.html#thr7" class="plus">En savoir plus</a>
+            <a href="product.php#thr7" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>WILD LOVE</h3>
             <img src="image/THR3.jpeg" alt="Wild Love">
-            <a href="product.html#thr8" class="plus">En savoir plus</a>
+            <a href="product.php#thr8" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>STAY WITH ME</h3>
             <img src="image/trill18.jpeg" alt="Stay With Me">
-            <a href="product.html#thr9" class="plus">En savoir plus</a>
+            <a href="product.php#thr9" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>MIDNIGHT KISS</h3>
             <img src="image/The Teacher.jpeg" alt="Midnight Kiss">
-            <a href="product.html#thr10" class="plus">En savoir plus</a>
+            <a href="product.php#thr10" class="plus">En savoir plus</a>
         </div>
     </div>
 </section>
@@ -310,68 +310,65 @@ $page_active = "products";
         <div class="livre">
             <h3>Abandonned Bonds</h3>
             <img src="image/Abandoned Bonds (The Iolite Academy).jpeg" alt="The Teacher">
-            <a href="product.html#fan1" class="plus">En savoir plus</a>
+            <a href="product.php#fan1" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>Black Heart</h3>
             <img src="image/télécharger (8).jpeg" alt="Fantasy 2">
-            <a href="product.html#fan2" class="plus">En savoir plus</a>
+            <a href="product.php#fan2" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>NOVEMBER 9</h3>
             <img src="image/November 9 de Collen Hoover.jpeg" alt="November 9">
-            <a href="product.html#fan3" class="plus">En savoir plus</a>
+            <a href="product.php#fan3" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>The Silent Patient</h3>
             <img src="image/13 Page Turners You Seriously Won’t Be Able To Stop Reading.jpeg" alt="Page Turner">
-            <a href="product.html#fan4" class="plus">En savoir plus</a>
+            <a href="product.php#fan4" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>THE HOUSEMAID</h3>
             <img src="image/The Housemaid by Freida McFadden.jpeg" alt="The Housemaid">
-            <a href="product.html#fan5" class="plus">En savoir plus</a>
+            <a href="product.php#fan5" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>The Book of Azrael </h3>
             <img src="image/FANTA1.jpeg" alt="Fantasy 6">
-            <a href="product.html#fan6" class="plus">En savoir plus</a>
+            <a href="product.php#fan6" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>Hexed</h3>
             <img src="image/FANTA2.jpeg" alt="High School Romance">
-            <a href="product.html#fan7" class="plus">En savoir plus</a>
+            <a href="product.php#fan7" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>Sorcery of Shadow </h3>
             <img src="image/FANTA3.jpeg" alt="Wild Love">
-            <a href="product.html#fan8" class="plus">En savoir plus</a>
+            <a href="product.php#fan8" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>Scarred</h3>
             <img src="image/FANTA4.jpeg" alt="Stay With Me">
-            <a href="product.html#fan9" class="plus">En savoir plus</a>
+            <a href="product.php#fan9" class="plus">En savoir plus</a>
         </div>
 
         <div class="livre">
             <h3>Cicatrices</h3>
             <img src="image/FANTA5.jpeg" alt="Midnight Kiss">
-            <a href="product.html#fan10" class="plus">En savoir plus</a>
+            <a href="product.php#fan10" class="plus">En savoir plus</a>
         </div>
     </div>
 </section>
 
-<!-- =========================================
-     SECTION "NOS CHOIX POUR VOUS"
-     ========================================= -->
 <div class="titre-final">
     <h3>Nos choix pour vous</h3>
 </div>

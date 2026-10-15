@@ -42,7 +42,7 @@ $page_active = "index" ;
             <img src="image/téléchargement (10).jpeg" alt="Captive — Sarah Rivens">
             <p><strong>Shattered vows</strong><br>de Shain Rose</p>
             <span>11 500 FCFA</span>
-            <h3><a href="product.php#captive" class="plus">Voir plus</a></h3>
+            <h3><a href="product.php#shatvows" class="plus">Voir plus</a></h3>
         </div>
 
         <div class="livre">

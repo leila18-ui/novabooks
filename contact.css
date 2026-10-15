@@ -14,9 +14,7 @@ html, body {
     overscroll-behavior: none;
 }
 
-/* =========================================
-   BODY
-   ========================================= */
+/* BODY */
 body {
     font-family: 'Georgia', serif;
     background-color: #f394bf;
@@ -25,96 +23,6 @@ body {
     /* ✅ PAS de display:flex → header et form s'empilent */
 }
 
-/* =========================================
-   HEADER (partie1)
-   ========================================= */
-.partie1 {
-    width: 100%;
-    background-color: #0f0f0f;
-    padding: 15px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-/* ===== LOGO + TAGLINE ===== */
-.brand {
-    display: flex;
-    align-items: baseline;
-    gap: 150px;
-}
-
-.brand h2 {
-    margin-right: 0;
-    font-size: 30px;
-    color: #ff6b9d;
-    font-weight: lighter;
-    line-height: 1.1;
-}
-
-.brand h2 a {
-    color: #ff6b9d;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.brand h2 a:hover {
-    color: #ff8fb3;
-}
-
-.brand h5 {
-    font-size: 11px;
-    color: #ff6b9d;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin: 0;
-}
-
-/* ===== NAVIGATION ===== */
-nav {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-nav ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 30px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 15px;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #ff6b9d;
-}
-
-/* ===== LIEN ACTIF ===== */
-nav a.active {
-    color: #ff6b9d;
-    font-weight: 700;
-    position: relative;
-}
-
-nav a.active::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
-    border-radius: 2px;
-}
 
 /* ===== BADGE PANIER ===== */
 .panier {
@@ -143,14 +51,14 @@ nav a.active::after {
 .login-form {
     width: 100%;
     max-width: 420px;
-    margin: 60px auto;             /* ✅ centré horizontalement */
+    margin: 60px auto;             /*  centré horizontalement */
     background-color: #ffffff;
     padding: 40px 32px;
     border-radius: 16px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== TITRE ===== */
+
 .login-title {
     font-size: 24px;
     color: #1a1a2e;
@@ -159,7 +67,6 @@ nav a.active::after {
     font-weight: 700;
 }
 
-/* ===== CHAMPS ===== */
 .form-group {
     margin-bottom: 18px;
 }
@@ -187,7 +94,6 @@ nav a.active::after {
     background-color: #f9f9f9;
 }
 
-/* ===== SOUVENIR ===== */
 .souvenir {
     margin-bottom: 20px;
 }
@@ -207,7 +113,6 @@ nav a.active::after {
     cursor: pointer;
 }
 
-/* ===== BOUTON ===== */
 .connexion button {
     width: 100%;
     padding: 13px;
@@ -226,7 +131,6 @@ nav a.active::after {
     transform: translateY(-1px);
 }
 
-/* ===== LIENS ===== */
 .liens {
     margin-top: 20px;
     text-align: center;
@@ -253,9 +157,7 @@ nav a.active::after {
     font-weight: 700;
 }
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
+/*RESPONSIVE */
 
 /* ===== TABLETTE (< 768px) ===== */
 @media (max-width: 768px) {
@@ -298,7 +200,7 @@ nav a.active::after {
     }
 }
 
-/* ===== MOBILE (< 480px) ===== */
+/*  MOBILE (< 480px)*/
 @media (max-width: 480px) {
     .partie1 {
         padding: 12px 15px;
@@ -340,7 +242,7 @@ nav a.active::after {
         margin-bottom: 20px;
     }
 
-    /* ✅ Anti-zoom iOS : inputs à 16px minimum */
+    /* Anti-zoom iOS : inputs à 16px minimum */
     .form-group input {
         font-size: 16px;
         padding: 11px 12px;

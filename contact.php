@@ -5,29 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion — NovaBooks</title>
     <link rel="stylesheet" href="contact.css">
-    <script src="contact.css" defer></script>
+    <link rel="stylesheet" href="part/header.css">
+    <script src="contact.js" defer></script>
 </head>
 <body>
 
-<header class="partie1">
-    <div class="brand">
-        <h2><a href="index.html">NovaBooks</a></h2>
-        <h5>Des histoires qui restent</h5>
-    </div>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="products.html">Catalogue</a></li>
-            <li><a href="contact.html" class="active">Connexion</a></li>
-            <li><a href="checkout.html">Checkout</a></li>
-            <li><a href="about.html">À propos</a></li>
-            <li class="panier">
-                <a href="cart.html">🛒<span id="icon-panier"></span></a>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <?php require 'part/header.php'?>
 
 <form action="" method="post" class="login-form">
 
