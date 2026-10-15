@@ -29,7 +29,11 @@
     </header>
 
     <section class="form">
+<<<<<<< HEAD:checkout.php
         <form id="checkout-form" action="traitement.php" method="post">
+=======
+        <form method="POST"  action="traitement.php"  id="checkout-form">
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281:checkout.html
 
             <fieldset class="info">
                 <legend>Informations personnelles</legend>

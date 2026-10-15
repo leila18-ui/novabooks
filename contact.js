@@ -19,6 +19,14 @@ function saveCurrentUser(email) {
 // ===== RÉCUPÉRATION DES ÉLÉMENTS HTML =====
 
 const form = document.querySelector('form');
+<<<<<<< HEAD
+=======
+const inputEmail = form ? form.querySelector('input[name="email"]') : null;
+const inputPassword = form ? form.querySelector('input[name="password"]') : null;
+const checkboxRemember = form ? form.querySelector('input[name="souvenir"]') : null;
+const linkCreateAccount = document.querySelector('a.comp');
+const linkForgotPassword = document.querySelector('a.mdp');
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281
 
 // ===== FONCTIONS D'AUTHENTIFICATION =====
 
@@ -48,7 +56,12 @@ function register(email, password, passwordConfirm) {
     saveUsers(users);
 
     alert('✅ Inscription réussie ! Connectez-vous maintenant.');
+<<<<<<< HEAD
 
+=======
+    
+   // Vider les champs et revenir au login
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281
     if (form) {
         form.reset();
     }
@@ -93,6 +106,7 @@ function login(email, password, remember) {
 // ===== BASCULER ENTRE LOGIN ET REGISTER =====
 
 function switchToLogin() {
+<<<<<<< HEAD
     if (!form) return;
 
     form.innerHTML = `
@@ -109,6 +123,17 @@ function switchToLogin() {
         </div>
 
         <div class="souvenir">
+=======
+    if (form) {
+        form.innerHTML = `
+            <h2>Connexion</h2>
+            <h2>mail</h2>
+            <input type="text" name="email" placeholder=" example@gmail.com  "> <br>
+            <h2>mot de passe</h2>
+            <input type="password" name="password" placeholder=" 0000 "> <br>
+            
+            <div class="souvenir">
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281
             <label>
                 <input type="checkbox" name="souvenir">
                 <span>Se souvenir de moi</span>
@@ -172,7 +197,11 @@ function attachLoginEvents() {
         // ✅ onsubmit (au lieu de addEventListener) → pas de doublon
         form.onsubmit = function(e) {
             e.preventDefault();
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281
             const email = form.querySelector('input[name="email"]').value.trim();
             const password = form.querySelector('input[name="password"]').value.trim();
             const remember = form.querySelector('input[name="souvenir"]').checked;
@@ -227,6 +256,16 @@ function attachRegisterEvents() {
 window.addEventListener('load', function() {
     // Attacher les événements au formulaire de login
     attachLoginEvents();
+<<<<<<< HEAD
 
     console.log('✅ contact.js chargé avec succès');
 });
+=======
+    
+    console.log('✅ succes.js chargé avec succès');
+});
+
+
+
+
+>>>>>>> 2daa20932202cf201b7f591f3eaccf37c81e3281

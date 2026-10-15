@@ -21,6 +21,24 @@ body {
 }
 
 
+nav a.active {
+    color: #ff6b9d;
+    font-weight: 700;
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff6b9d, transparent);
+    border-radius: 2px;
+}
+
 .panier {
     position: relative;
 }
